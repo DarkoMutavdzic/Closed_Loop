@@ -1,0 +1,182 @@
+<robot name="simple_model">
+<link name="part_1">
+<visual>
+<origin xyz="-0.00445564 0.00444506 0.00226563" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.00445564 0.00444506 0.00226563" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0127384 0.014146 0.00476563" rpy="0 0 0"/>
+<mass value="0.00452102" />
+<inertia ixx="1.43406e-08" ixy="0"  ixz="0" iyy="3.24381e-06" iyz="0" izz="3.23932e-06" />
+</inertial>
+</link>
+
+<link name="part_1_2">
+<visual>
+<origin xyz="0.0291335 0.0115081 0.0025" rpy="3.14159 -0 2.79903e-82" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0291335 0.0115081 0.0025" rpy="3.14159 -0 2.79903e-82" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0463275 0.00180719 0" rpy="0 0 0"/>
+<mass value="0.00452102" />
+<inertia ixx="1.43406e-08" ixy="9.08311e-88"  ixz="0" iyy="3.24381e-06" iyz="3.30274e-62" izz="3.23932e-06" />
+</inertial>
+</link>
+
+<link name="part_1_3">
+<visual>
+<origin xyz="-0.0635215 0.00789372 0.0025" rpy="3.14159 -0 -3.04078e-87" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0635215 0.00789372 0.0025" rpy="3.14159 -0 -3.04078e-87" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0463275 -0.00180719 -4.33681e-19" rpy="0 0 0"/>
+<mass value="0.00452102" />
+<inertia ixx="1.43406e-08" ixy="-3.11719e-95"  ixz="0" iyy="3.24381e-06" iyz="0" izz="3.23932e-06" />
+</inertial>
+</link>
+
+<joint name="Revolute 2" type="revolute">
+<origin xyz="0.092655 -6.93889e-18 0" rpy="8.23685e-42 6.02301e-45 1.57064" />
+<parent link="part_1_2" />
+<child link="part_1_3" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="Revolute 1" type="revolute">
+<origin xyz="-0.0335891 0.0123388 0.00476563" rpy="-3.14159 8.06729e-42 -1.57096" />
+<parent link="part_1" />
+<child link="part_1_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="part_1_4">
+<visual>
+<origin xyz="0.0291335 0.00789372 0.0025" rpy="3.14159 1.27447e-57 5.94791e-96" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0291335 0.00789372 0.0025" rpy="3.14159 1.27447e-57 5.94791e-96" />
+<geometry>
+<mesh filename="package://zatvoren/meshes/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0463275 -0.00180719 0" rpy="0 0 0"/>
+<mass value="0.00452102" />
+<inertia ixx="1.43406e-08" ixy="-3.91147e-102"  ixz="-1.82767e-65" iyy="3.24381e-06" iyz="-1.08708e-160" izz="3.23932e-06" />
+</inertial>
+</link>
+
+<joint name="Revolute_3" type="revolute">
+<origin xyz="0.0590659 0.0123388 0.00476563" rpy="3.14159 -7.10107e-42 -1.57096" />
+<parent link="part_1" />
+<child link="part_1_4" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<!--
+<joint name="Revolute 4" type="revolute">
+<origin xyz="-0.092655 -5.55112e-17 0" rpy="-3.57042e-41 6.93151e-42 -1.57064" />
+<parent link="part_1_3" />
+<child link="part_1_4" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+-->
+
+<gazebo>
+
+<joint name="Revolute 4" type="revolute">
+<pose>0.0590512 -0.0803162 0.00476563 3.14159 -7.10107e-42 -1.57096</pose>
+<parent>part_1_3</parent>
+<child>part_1_4</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+</gazebo>
+
+
+
+
+<gazebo>
+<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+<robotNamespace>/simple_model</robotNamespace>
+<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+</plugin>
+</gazebo>
+
+
+<transmission name="Revolute_3_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Revolute_3">
+<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+</joint>
+<actuator name="Revolute_3">
+<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction> 
+</actuator>
+
+</transmission>
+
+</robot>
