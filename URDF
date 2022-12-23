@@ -170,10 +170,10 @@
 <transmission name="Revolute_3_trans">
 <type>transmission_interface/SimpleTransmission</type>
 <joint name="Revolute_3">
-<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
 </joint>
 <actuator name="Revolute_3">
-<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
 <mechanicalReduction>1</mechanicalReduction> 
 </actuator>
 
