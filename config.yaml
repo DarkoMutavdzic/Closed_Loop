@@ -7,6 +7,6 @@ simple_model:
 
   # Position Controllers ---------------------------------------
   Revolute_3_position_controller:
-    type: velocity_controllers/JointPositionController
+    type: effort_controllers/JointPositionController
     joint: Revolute_3
     pid: {p: 100.0, i: 0.01, d: 10.0}
