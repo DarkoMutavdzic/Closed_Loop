@@ -156,7 +156,12 @@
 
 </gazebo>
 
+<link name="world"/>
 
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="part_1"/>
+  </joint>
 
 
 <gazebo>
